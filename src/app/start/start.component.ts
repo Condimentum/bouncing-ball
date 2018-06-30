@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BallComponent } from '../ball/ball.component';
+import { Ball } from '../ball';
+import { BallInstance } from '../ball-instance';
 
 @Component({
   selector: 'app-start',
@@ -8,11 +9,15 @@ import { BallComponent } from '../ball/ball.component';
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+	ball: Ball;
+
+  constructor() {
+  	this.ball = BallInstance;
+  }
 
   ngOnInit() {
-  	var Ball = new BallComponent();
-  	setTimeout(() => Ball.start(), 1000);
+  	this.ball.draw();
+  	setTimeout(() => this.ball.start(), 1000);
   }
 
 }

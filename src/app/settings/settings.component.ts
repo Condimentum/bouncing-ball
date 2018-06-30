@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BallComponent } from '../ball/ball.component';
+import { Ball } from '../ball';
+import { BallInstance } from '../ball-instance';
 
 @Component({
   selector: 'app-settings',
@@ -8,13 +9,15 @@ import { BallComponent } from '../ball/ball.component';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+	ball: Ball;
+
+  constructor() {
+  	this.ball = BallInstance;
+  }
 
   ngOnInit() {
-  	const Ball = new BallComponent();
-  	Ball.r = 20;
-  	Ball.speed = 2;
-  	Ball.angle = 45;
+  	this.ball.speed = 2;
+  	this.ball.angle = 10;
   }
 
 }
