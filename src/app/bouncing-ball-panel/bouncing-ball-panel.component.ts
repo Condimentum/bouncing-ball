@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BallComponent } from '../ball/ball.component';
 
 @Component({
   selector: 'app-bouncing-ball-panel',

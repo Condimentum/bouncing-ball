@@ -11,19 +11,18 @@ export class BallComponent implements OnInit {
 	speed: number;
 	r: number; // radius
 	color: string; // Later, enum COLOR
-	startAngle: number;
+	angle: number;
 	private X: number;
 	private Y: number;
 	private dX: number;
 	private dY: number;
 
-
-  constructor(r: number, angle: number) {
-  	this.r = r;
-  	this.X = 200;
-  	this.Y = 200;
-  	this.dX = 1;
-  	this.dY = 1;
+  constructor() {
+  	this.r = 15;
+  	this.X = this.r;
+  	this.Y = 240;
+  	this.dX = 0; //speed * Math.cos(angle) ||
+  	this.dY = 0; //speed * Math.sin(angle) ||
   }
 
   draw() {
@@ -53,10 +52,11 @@ export class BallComponent implements OnInit {
   	}
   	this.X += this.dX;
   	this.Y += this.dY;
+  	setTimeout(() => this.start(), 10);
   }
 
   ngOnInit() {
-  	setInterval(() => this.start(), 10);
+  	this.draw();
   }
 
 }
