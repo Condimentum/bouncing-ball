@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BouncingBallPanelComponent implements OnInit {
 
+	title = "Bouncing Ball Simulation";
+
   constructor() { }
 
   getCanvas() {
