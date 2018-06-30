@@ -16,7 +16,7 @@ export class Ball {
 		this.Y = 240;
 		this.dX = 0;
 		this.dY = 0;
-		this.color = "#0095DD";
+		this.color = "blue";
 	}
 
 	draw() {
