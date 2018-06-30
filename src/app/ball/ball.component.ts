@@ -18,8 +18,8 @@ export class BallComponent implements OnInit {
 	private dY: number;
 
 
-  constructor() {
-  	this.r = 20;
+  constructor(r: number, angle: number) {
+  	this.r = r;
   	this.X = 200;
   	this.Y = 200;
   	this.dX = 1;
