@@ -9,6 +9,7 @@ export class Ball {
 	private Y: number;
 	private dX: number;
 	private dY: number;
+	private bounces: number;
 
 	constructor() {
 		this.r = 15;
@@ -17,6 +18,7 @@ export class Ball {
 		this.dX = 0;
 		this.dY = 0;
 		this.color = "blue";
+		this.bounces = 0;
 	}
 
 	draw() {
@@ -33,14 +35,26 @@ export class Ball {
 	}
 
 	run() {
+		if (this.bounces > 5) {
+			this.r = 15;
+			this.X = 15;
+			this.Y = 240;
+			this.dX = 0;
+			this.dY = 0;
+			this.color = "blue";
+			this.bounces = 0;
+			return;
+		}
 		const canvas = new BouncingBallPanelComponent().getCanvas();
 		console.log(`${this.X}`, `${this.Y}`);
   		this.draw();
   		if (this.X + this.dX > canvas.width - this.r || this.X + this.dX < this.r) {
   			this.dX = -this.dX;
+  			this.bounces += 1;
   		}
   		if (this.Y + this.dY > canvas.height - this.r || this.Y + this.dY < this.r) {
   			this.dY = -this.dY;
+  			this.bounces += 1;
   		}
   		this.X += this.dX;
   		this.Y += this.dY;
