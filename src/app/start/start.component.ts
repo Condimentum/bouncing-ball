@@ -9,6 +9,8 @@ import { BallInstance } from '../ball-instance';
 })
 export class StartComponent implements OnInit {
 
+	title = "Start";
+
 	ball: Ball;
 
   constructor() {
@@ -17,7 +19,6 @@ export class StartComponent implements OnInit {
 
   ngOnInit() {
   	this.ball.draw();
-  	setTimeout(() => this.ball.start(), 1000);
   }
 
 }

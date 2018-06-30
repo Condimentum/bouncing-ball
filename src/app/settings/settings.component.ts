@@ -9,6 +9,8 @@ import { BallInstance } from '../ball-instance';
 })
 export class SettingsComponent implements OnInit {
 
+	title = "Settings";
+
 	ball: Ball;
 
   constructor() {

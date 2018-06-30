@@ -1,3 +1,17 @@
-<p>
-  settings works!
-</p>
+<h3>{{title}}</h3>
+<div>
+	<label>Speed</label>
+	<input type="number" [(ngModel)]="ball.speed" placeholder="1" />
+</div>
+<div>
+	<label>Angle</label>
+	<input type="number" [(ngModel)]="ball.angle" placeholder="45" />
+</div>
+<div>
+	<label>Color</label>
+	<select>
+		<option selected>Blue</option>
+		<option>Green</option>
+		<option>Magenta</option>
+	</select>
+</div>
