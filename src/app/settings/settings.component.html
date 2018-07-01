@@ -1,23 +1,41 @@
-<h3>{{title}}</h3>
-<div>
-	<label>Speed</label>
-	<input type="number" [(ngModel)]="ball.speed" placeholder="1" />
-</div>
-<div>
-	<label>Angle</label>
-	<input type="number" [(ngModel)]="ball.angle" placeholder="45" />
-</div>
-<div>
-	<label>Color</label>
-	<select [(ngModel)]="ball.color">
-		<option value="blue">
-			Blue
-		</option>
-		<option value="green">
-			Green
-		</option>
-		<option value="magenta">
-			Magenta
-		</option>
-	</select>
+<div class="row">
+	<div class="col">
+		<h3>{{title}}</h3>
+	</div>
+	<div class="col">
+		<div class="row">
+			<div class="col">
+				Speed
+			</div>
+			<div class="col">
+				<input class="form-control" type="number" [(ngModel)]="ball.speed" placeholder="1" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				Angle
+			</div>
+			<div class="col">
+				<input class="form-control" type="number" [(ngModel)]="ball.angle" placeholder="45" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				Color
+			</div>
+			<div class="col">
+				<select class="form-control" [(ngModel)]="ball.color">
+					<option value="blue">
+						Blue
+					</option>
+					<option value="green">
+						Green
+					</option>
+					<option value="magenta">
+						Magenta
+					</option>
+				</select>
+			</div>
+		</div>
+	</div>
 </div>

@@ -9,7 +9,7 @@ import { BallInstance } from '../ball-instance';
 })
 export class StartComponent implements OnInit {
 
-	title = "Start";
+	title = "Start Demo";
 
 	ball: Ball;
 
