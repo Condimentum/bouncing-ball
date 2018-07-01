@@ -19,7 +19,7 @@ export class SettingsComponent implements OnInit {
 
   ngOnInit() {
   	this.ball.speed = 2;
-  	this.ball.angle = 10;
+  	this.ball.angle = 20;
   }
 
 }
