@@ -9,4 +9,5 @@ import { Ball } from './ball';
 export class AppComponent {
   title = 'Bouncing Ball';
   ball = new Ball();
+  window=window;
 }
